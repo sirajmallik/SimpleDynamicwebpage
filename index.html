@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dynamic Webpage</title>
+  <style>
+    .container {
+      text-align: center;
+      margin-top: 50px;
+    }
+    #dynamic-content {
+      font-size: 24px;
+      color: blue;
+    }
+    .button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Dynamic Webpage</h1>
+    <p id="dynamic-content">Click the button to change the text.</p>
+    <button class="button" onclick="changeText()">Change Text</button>
+  </div>
+
+  <script>
+    function changeText() {
+      var dynamicContent = document.getElementById("dynamic-content");
+      dynamicContent.innerHTML = "Text changed!";
+      dynamicContent.style.color = "red";
+    }
+  </script>
+</body>
+</html>
